@@ -32,6 +32,7 @@ kubectl apply -f eks-admin-service-account.yaml
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep eks-admin | awk '{print $1}')
 ```
 
+Install [Kube Dashboard](https://docs.aws.amazon.com/eks/latest/userguide/dashboard-tutorial.html)
 ```bash
 oc project kube-system
 helm init --history-max 200
