@@ -36,6 +36,7 @@ kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | gre
 oc project kube-system
 helm init --history-max 200
 helm repo update
+sleep 30
 helm install stable/kubernetes-dashboard
 export POD_NAME=$(kubectl get pods -n kube-system -l "app=kubernetes-dashboard,release=wondering-lizard" -o jsonpath="{.items[0].metadata.name}")
 kubectl -n kube-system port-forward $POD_NAME 8443:8443
