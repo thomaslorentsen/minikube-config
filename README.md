@@ -50,9 +50,9 @@ kubectl -n kube-system port-forward $POD_NAME 8443:8443
 
 ```bash
 helm install --name my-service charts/simple
-helm upgrade my-service charts/simple
+helm upgrade --atomic my-service charts/simple
 helm status my-service
-helm delete my-service
+helm delete --purge my-service
 ```
 
 ```bash
