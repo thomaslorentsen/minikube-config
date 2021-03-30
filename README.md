@@ -10,7 +10,7 @@ brew install docker-machine-driver-hyperkit
 
 Install [minikube](https://github.com/kubernetes/minikube)
 ```bash
-brew cask install minikube
+brew install minikube
 ```
 
 Install Helm
